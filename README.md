@@ -5,7 +5,6 @@
 
 
 
-
 The bot shows up-to-date status about COVID-19 cases. Enter the country name in Latin and get up-to-date statistics.
 * [Bot Link](t.me/cv19_corona_virus_bot)
 

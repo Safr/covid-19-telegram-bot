@@ -1,18 +1,15 @@
 require('dotenv').config();
 const Telegraf = require(`telegraf`);
 const Markup = require('telegraf/markup')
-const covidService = require('./src/services/covid');
-const formatCountryMsg = require('./src/messages/country');
-const COUNTRIES = require('./src/countries')
+const covidService = require('./services/covid');
+const formatCountryMsg = require('./messages/country');
+const COUNTRIES = require('./countries');
 
 const PORT = process.env.PORT || 5000;
-const URL = process.env.URL;
-const BOT_TOKEN = process.env.BOT_TOKEN;
-
+const { BOT_TOKEN, URL } = process.env;
 const bot = new Telegraf(BOT_TOKEN);
 
 // commands
-// start, help
 bot.start(ctx => ctx.reply(`
 Welcome to COVID-19 BOT!
 Type country name and get the most up-to-date information about COVID-19.
@@ -38,12 +35,13 @@ bot.hears(/.*/, async ctx => {
 
 
 // launch
-// if (process.env.NODE_ENV === 'production') {
-	bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`)
-	bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT)
-// } else {
-// 	bot
-// 		.launch()
-// 		.then(() => console.log(`Launched at ${new Date()}`))
-// 		.catch((err) => console.log(`ERROR at launch:`, err))
-// }
+if (process.env.NODE_ENV === 'production') {
+	bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
+  bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
+  console.log(`${URL}/bot${BOT_TOKEN}`)
+} else {
+	bot
+		.launch()
+		.then(() => console.log(`Launched at ${new Date()}`))
+		.catch((err) => console.log(`ERROR at launch:`, err))
+}
