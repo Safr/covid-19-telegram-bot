@@ -13,7 +13,7 @@ const bot = new Telegraf(BOT_TOKEN);
 bot.start(ctx => ctx.reply(`
 Welcome to COVID-19 BOT!
 Type country name and get the most up-to-date information about COVID-19.
-Try /help command to see how to use this bot.
+Try /help command to see what countries are available.
 `,
 Markup.keyboard([
   ['Russia', 'Ukraine'],
