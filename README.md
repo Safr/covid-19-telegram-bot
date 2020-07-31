@@ -1,6 +1,10 @@
 # covid-19-telegram-bot
 
-[<img src="covid-logo.png" width="250" align="left" />]()
+[<img src="covid-logo.png" width="250" align="right" />]()
+
+
+
+
 
 The bot shows up-to-date status about COVID-19 cases. Enter the country name in Latin and get up-to-date statistics.
 * [Bot Link](t.me/cv19_corona_virus_bot)
@@ -13,7 +17,7 @@ The bot shows up-to-date status about COVID-19 cases. Enter the country name in 
 * [dotenv](https://www.npmjs.com/package/dotenv)
 * [axios](https://www.npmjs.com/package/axios)
 * [country-emoji](https://www.npmjs.com/package/country-emoji)
-* nodemon [(monitors for any changes in your source and automatically restart your nodejs server)](https://nodemon.io/)
+* [nodemon](https://nodemon.io/)
 
 
 ### Installation
