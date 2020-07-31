@@ -8,9 +8,8 @@ const COUNTRIES = require('./src/countries')
 const PORT = process.env.PORT || 5000;
 const URL = process.env.URL;
 const BOT_TOKEN = process.env.BOT_TOKEN;
-const bot = new Telegraf(BOT_TOKEN);
 
-console.log(URL)
+const bot = new Telegraf(BOT_TOKEN);
 
 // commands
 // start, help
