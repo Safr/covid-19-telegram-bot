@@ -10,6 +10,8 @@ const URL = process.env.URL;
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const bot = new Telegraf(BOT_TOKEN);
 
+console.log(URL)
+
 // commands
 // start, help
 bot.start(ctx => ctx.reply(`
