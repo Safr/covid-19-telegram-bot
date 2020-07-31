@@ -38,12 +38,12 @@ bot.hears(/.*/, async ctx => {
 
 
 // launch
-if (process.env.NODE_ENV === 'production') {
+// if (process.env.NODE_ENV === 'production') {
 	bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`)
 	bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT)
-} else {
-	bot
-		.launch()
-		.then(() => console.log(`Launched at ${new Date()}`))
-		.catch((err) => console.log(`ERROR at launch:`, err))
-}
+// } else {
+// 	bot
+// 		.launch()
+// 		.then(() => console.log(`Launched at ${new Date()}`))
+// 		.catch((err) => console.log(`ERROR at launch:`, err))
+// }
